@@ -1,2 +1,3 @@
-# SMAS-Revenue-Report
-SMAS Project - SMAS Revenue Report (Sep-2022)
+#### SMAS Project
+
+Description: SMAS Revenue Report (Sep-2022)
