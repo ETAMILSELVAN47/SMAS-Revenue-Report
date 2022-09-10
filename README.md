@@ -17,38 +17,37 @@ Description: SMAS Revenue Report (Sep-2022)
 @XXSMAS_SHEET10_DTLS_TB.sql
 @XXSMAS_SHEET11_DTLS_TB.sql
 
-2. Create Packages
+**2. Create Packages**
 
 @XXSMAS_REVENUE_PKG.PKS
 @XXSMAS_REVENUE_PKG.PKB
 
-3. Create views
+**3. Create views**
 
 XXSMAS_SUMMARY_DTLS_VW
 
-4. Valueset
-
+**4. Valueset**
 
    Source:SMAS-TEST
    Target:SMAS-PROD
 
-   Valueset Name:XXSMAS_REVENUE_LEDGER_SET
+   **Valueset Name:XXSMAS_REVENUE_LEDGER_SET**
    
-   Download:
+   **Download:**
    
    FNDLOAD apps/testapps O Y DOWNLOAD $FND_TOP/patch/115/import/afffload.lct XXSMAS_REVENUE_LEDGER_SET.ldt VALUE_SET FLEX_VALUE_SET_NAME="XXSMAS_REVENUE_LEDGER_SET"
    
-   Upload:
+   **Upload:**
    
    FNDLOAD apps/<pwd> 0 Y UPLOAD $FND_TOP/patch/115/import/afffload.lct XXSMAS_REVENUE_LEDGER_SET.ldt
    
-   Valueset Name:XXSMAS_GL_PERIOD_NAME_SET
+   **Valueset Name:XXSMAS_GL_PERIOD_NAME_SET**
    
-   Download:
+   **Download:**
    
    FNDLOAD apps/testapps O Y DOWNLOAD $FND_TOP/patch/115/import/afffload.lct XXSMAS_GL_PERIOD_NAME_SET.ldt VALUE_SET FLEX_VALUE_SET_NAME="XXSMAS_GL_PERIOD_NAME_SET"
    
-   Upload:
+   **Upload:**
    
    FNDLOAD apps/<pwd> 0 Y UPLOAD $FND_TOP/patch/115/import/afffload.lct XXSMAS_GL_PERIOD_NAME_SET.ldt
 
