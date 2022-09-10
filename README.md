@@ -73,12 +73,16 @@ XXSMAS_SUMMARY_DTLS_VW
    FNDLOAD apps/testapps O Y DOWNLOAD $FND_TOP/patch/115/import/afcpprog.lct XXSMAS_REVENUE_REPORT.ldt PROGRAM APPLICATION_SHORT_NAME="XXSMAS" CONCURRENT_PROGRAM_NAME="XXSMAS_REVENUE_REPORT"
    
    **Upload:**
+   
+   FNDLOAD apps/<Pwd> 0 Y UPLOAD $FND_TOP/patch/115/import/afcpprog.lct XXSMAS_REVENUE_REPORT.ldt - WARNING=YES UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE
   
+    
  **6. Assign Concurrent Program to Responsibility**
   
   **Concurrent Program Name:** SMAS Revenue Report
+  
   **Parameters:**
+  
   a)Ledger
+  
   b)Period
-   
-   FNDLOAD apps/<Pwd> 0 Y UPLOAD $FND_TOP/patch/115/import/afcpprog.lct XXSMAS_REVENUE_REPORT.ldt - WARNING=YES UPLOAD_MODE=REPLACE CUSTOM_MODE=FORCE
