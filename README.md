@@ -53,7 +53,7 @@ XXSMAS_SUMMARY_DTLS_VW
    
    FNDLOAD apps/<pwd> 0 Y UPLOAD $FND_TOP/patch/115/import/afffload.lct XXSMAS_REVENUE_LEDGER_SET.ldt
    
-   **Valueset Name:XXSMAS_GL_PERIOD_NAME_SET**
+   **Valueset Name: XXSMAS_GL_PERIOD_NAME_SET**
    
    **Download:**
    
