@@ -6,7 +6,9 @@ Description: SMAS Revenue Report (Sep-2022)
 **1. Create Tables:**
 
 @XXSMAS_SUMMARY_DTLS_TB.sql
+
 @XXSMAS_SHEET1_DTLS_TB.sql
+
 @XXSMAS_SHEET2_DTLS_TB.sql
 @XXSMAS_SHEET3_DTLS_TB.sql
 @XXSMAS_SHEET4_DTLS_TB.sql
