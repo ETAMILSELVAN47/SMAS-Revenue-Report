@@ -307,9 +307,16 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
-COMMIT;		 
+COMMIT;		
+
+----
+DELETE xxsmas_sheet1_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet1_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_SHEET1_PROC;
+END xxsmas_sheet1_proc;
 
 --- Get Summary details:
 PROCEDURE XXSMAS_SUMMARY_DTLS_PROC(p_ledger_name IN VARCHAR2,p_period IN VARCHAR2)
@@ -441,9 +448,16 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
-COMMIT;		 
+COMMIT;		
+
+----
+DELETE xxsmas_sheet2_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet2_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_SHEET2_PROC;
+END xxsmas_sheet2_proc;
 
 --- Get Sheet3 Details:
 PROCEDURE  xxsmas_sheet3_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -539,8 +553,15 @@ group by gl.name             ,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
 COMMIT;		 
+
+----
+DELETE xxsmas_sheet3_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet3_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_SHEET3_PROC;
+END xxsmas_sheet3_proc;
 
 --- Get Sheet4 Details:
 PROCEDURE  xxsmas_sheet4_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -635,9 +656,16 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
-COMMIT;		 
+COMMIT;		
+
+----
+DELETE xxsmas_sheet4_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet4_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_SHEET4_PROC;
+END xxsmas_sheet4_proc;
 
 --- Get sheet5 Details:
 PROCEDURE  xxsmas_sheet5_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -732,9 +760,17 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
-COMMIT;		 
+COMMIT;	
+
+----
+DELETE xxsmas_sheet5_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet5_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	
+	 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_sheet5_PROC;
+END xxsmas_sheet5_proc;
 
 --- Get sheet6 Details:
 PROCEDURE  xxsmas_sheet6_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -829,9 +865,16 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
+COMMIT;	
+
+----
+DELETE xxsmas_sheet6_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet6_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
 COMMIT;		 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_sheet6_PROC;
+END xxsmas_sheet6_proc;
 
 --- Get sheet7 Details:
 PROCEDURE  xxsmas_sheet7_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -927,8 +970,15 @@ group by gl.name             ,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
 COMMIT;		 
+
+----
+DELETE xxsmas_sheet7_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet7_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_sheet7_PROC;
+END xxsmas_sheet7_proc;
 
 --- Get sheet9 Details:
 PROCEDURE  xxsmas_sheet9_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -1023,9 +1073,16 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
+COMMIT;	
+
+----
+DELETE xxsmas_sheet9_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet9_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
 COMMIT;		 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_sheet9_PROC;
+END xxsmas_sheet9_proc;
 
 --- Get sheet10 Details:
 PROCEDURE  xxsmas_sheet10_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -1120,9 +1177,16 @@ group by gl.name             ,
 		 gb.code_combination_id,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
-COMMIT;		 
+COMMIT;	
+
+----
+DELETE xxsmas_sheet10_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet10_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;	 
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_sheet10_PROC;
+END xxsmas_sheet10_proc;
 
 --- Get sheet11 Details:
 PROCEDURE  xxsmas_sheet11_proc (p_ledger_name IN VARCHAR2,p_period IN VARCHAR2) AS 
@@ -1204,7 +1268,7 @@ AND gb.template_id IS NULL
 AND gb.period_num <=lv_period_number
 AND gb.period_year=lv_period_year
 AND gb.code_combination_id = gcc.code_combination_id
-AND gcc.segment4 ='38003'
+AND gcc.segment4 ='30501'
 group by gl.name             ,
          gl.period_set_name  ,
          gb.period_name      ,
@@ -1218,8 +1282,15 @@ group by gl.name             ,
 		 gb.ledger_id
          order by segment4,segment3,gb.period_num asc;
 COMMIT;		 
+
+----
+DELETE xxsmas_sheet11_dtls_tb
+WHERE 1=1
+AND asset IN (
+SELECT asset FROM(SELECT asset,SUM(net_movement) FROM xxsmas_sheet11_dtls_tb WHERE 1=1 GROUP BY asset HAVING SUM(net_movement) =0));
+COMMIT;
 -------------------------------------------------------------------------------------------------------------------------------------------------------
-END XXSMAS_sheet11_PROC;
+END xxsmas_sheet11_proc;
 
 --- Get Sheet1 Main Details:
 PROCEDURE xxsmas_sheet_main(errbuf OUT VARCHAR2,
@@ -1818,7 +1889,7 @@ fnd_file.put_line(fnd_file.output,'
    lv_serial_number:=0;
 
 FOR header IN (SELECT UNIQUE ledger_name,
-                             location,
+                             location_description,
                              asset,
 							 remarks,
 	                         insta_lr ,
@@ -1879,7 +1950,7 @@ lv_serial_number:=lv_serial_number+1;
     <Cell><Data ss:Type="String">'||header.oracle_code||'</Data></Cell>
     <Cell><Data ss:Type="String">'||get_customer_name_func(p_ledger_name=>header.ledger_name,p_asset_number=>header.asset)||'</Data></Cell>
     <Cell><Data ss:Type="String">'||header.billing_type||'</Data></Cell>
-    <Cell><Data ss:Type="String">'||header.location||'</Data></Cell>
+    <Cell><Data ss:Type="String">'||header.location_description||'</Data></Cell>
     <Cell><Data ss:Type="String">'||header.rental_category||'</Data></Cell>
     <Cell><Data ss:Type="String">'||header.contract_start_date||'</Data></Cell>
     <Cell><Data ss:Type="String">'||header.contract_end_date||'</Data></Cell>
@@ -3628,8 +3699,6 @@ fnd_file.put_line(fnd_file.output,'<Column ss:AutoFitWidth="0" ss:Width="120"/>'
  </Worksheet>');
  
 fnd_file.put_line(fnd_file.output,'</Workbook>');
-
-
 
 END xxsmas_sheet_main;
 
